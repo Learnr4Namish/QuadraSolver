@@ -6,7 +6,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
+            background-color: white;
         }
 
         h1 {
@@ -16,10 +16,10 @@
         form {
             margin: 20px;
             padding: 20px;
-            border:   
- 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #fff;
+            border:- 1px solid #ccc;
+            color: white;
+            border-radius: 25px;
+            background-color: #000000;
         }
 
         label {
@@ -29,7 +29,7 @@
         }
 
         input {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 3px;
@@ -39,10 +39,10 @@
             padding: 10px 20px;
             background-color: #4CAF50;
             color: white;
-            border:   
- none;
+            border: none;
             border-radius: 3px;
             cursor: pointer;
+            font-size: 18px;
         }
 
         button:hover {
@@ -59,12 +59,23 @@
 <body>
     <h1>QuadraSolver</h1>
     <form id="quadraticForm">
-        <label for="a">Coefficient of x² (a):</label>
+        <label for="a"><b>Coefficient of x² (a):</b></label>
+        <br>
         <input type="number" id="a" name="a" required>
-        <label for="b">Coefficient of x (b):</label>
+        <br>
+        <br>
+        <br>
+        <label for="b"><b>Coefficient of x (b):</b></label>
+        <br>
         <input type="number" id="b" name="b" required>
-        <label for="c">Constant (c):</label>
+        <br>
+        <br>
+        <br>
+        <label for="c"><b>Constant (c):</b></label>
+        <br>
         <input type="number" id="c" name="c" required>
+        <br>
+        <br>
         <button type="button" onclick="solveQuadratic()">Solve</button>
     </form>
     <div id="result"></div>
@@ -73,8 +84,7 @@
         function solveQuadratic() {
             var a = parseFloat(document.getElementById("a").value);
             var b = parseFloat(document.getElementById("b").value);
-            var c = parseFloat(document.getElementById("c").value);   
-  
+            var c = parseFloat(document.getElementById("c").value);
 
 
             var discriminant = b * b - 4 * a * c;
